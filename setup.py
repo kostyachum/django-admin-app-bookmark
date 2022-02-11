@@ -43,7 +43,13 @@ setup(
     maintainer='Kostiantyn Chumachenko',
     maintainer_email='kostaychum@gmail.com',
     license='MIT License',
-    packages=['app_bookmarks', 'app_bookmarks.migrations'],
+    packages=[
+        'app_bookmarks',
+        'app_bookmarks.migrations'
+        'app_bookmarks.static'
+        'app_bookmarks.templates'
+        'app_bookmarks.templates.admin'
+    ],
     python_requires='>=3.6',
     install_requires=["Django>=3;python_version<'3.10'"],
     classifiers=[
