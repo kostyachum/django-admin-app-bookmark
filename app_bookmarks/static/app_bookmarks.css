@@ -1,0 +1,25 @@
+.app-bookmark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input.bookmark-action {
+    padding: 0 5px;
+    font-size: 20px;
+    margin: 0;
+}
+
+/*.dashboard #content {*/
+/*    width: auto;*/
+/*}*/
+
+/*#content-main {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+
+/*.module {*/
+/*    margin: 20px;*/
+/*    min-width: 500px;*/
+/*}*/

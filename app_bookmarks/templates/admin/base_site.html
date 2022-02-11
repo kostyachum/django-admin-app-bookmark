@@ -1,0 +1,18 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrahead %}
+    <link rel="icon" href="{% static 'icons/favicon.ico' %}" sizes="48x48" />
+
+    {% if THEME_STYLES %}
+    <link rel="stylesheet" type="text/css" href="{% get_static_prefix %}{{ THEME_STYLES }}"/>
+    {% endif %}
+{% endblock %}
+
+{% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
