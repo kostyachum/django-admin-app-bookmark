@@ -10,7 +10,7 @@
           <div class="app-bookmark">
             <a href="{{ app.app_url }}" class="section" title="{% blocktranslate with name=app.name %}Models in the {{ name }} application{% endblocktranslate %}">{{ app.name }}</a>
             {% if allow_order %}
-            <form action="{% url 'admin-app-bookmarks-update-endpoint' %}" method="post"><input name="app" value="{{ app.app_label }}" hidden>
+            <form action="{% url 'admin:app-bookmarks-update-endpoint' %}" method="post"><input name="app" value="{{ app.app_label }}" hidden>
             {% if app.is_marked %}
               {% if app.can_up %}
               <input type="submit" name="up" class="bookmark-action" value="⇧">

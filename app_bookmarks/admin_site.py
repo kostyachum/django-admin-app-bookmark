@@ -53,7 +53,6 @@ class BookmarkedAdminSite(AdminSite):
 
     def get_urls(self):
         urls_patters = super().get_urls()
-        urls_patters.append(
-            path('bookmarks/update', views.UpdateAppBookmarkView.as_view(), name='admin-app-bookmarks-update-endpoint')
-        )
-        return urls_patters
+        more_patters = [path('bookmarks/update/', views.UpdateAppBookmarkView.as_view(), name='app-bookmarks-update-endpoint')]
+
+        return more_patters + urls_patters
