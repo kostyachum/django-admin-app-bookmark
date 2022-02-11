@@ -47,6 +47,7 @@ setup(
         'app_bookmarks',
         'app_bookmarks.migrations',
     ],
+    include_package_data=True,
     package_data={'app_bookmarks': ['templates/*', 'static/*.*', 'static/**/*.*', 'static/**/**/*.*']},
     python_requires='>=3.6',
     install_requires=["Django>=3;python_version<'3.10'"],
