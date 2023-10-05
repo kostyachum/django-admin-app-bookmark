@@ -8,14 +8,14 @@ from . import models, views
 class BookmarkedAdminSite(AdminSite):
 
 
-    def get_app_list(self, request):
+    def get_app_list(self, request, app_label=None):
         """
         Return a sorted list of all the installed apps that have been
-        registered in this site.
+        registered on this site.
         """
         order_apps = {o.app_label: o.order for o in models.AppBookmark.objects.filter(user_id=request.user.pk).only('app_label', 'order')}
 
-        app_dict = self._build_app_dict(request)
+        app_dict = self._build_app_dict(request, app_label)
         app_list = sorted(app_dict.values(), key=lambda x: self.get_app_order_index(x, order_apps))
 
         # Sort the models alphabetically within each app.
