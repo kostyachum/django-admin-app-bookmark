@@ -4,6 +4,8 @@
 {% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 
 {% block extrahead %}
+    {{ block.super }}
+
     <link rel="icon" href="{% static 'icons/favicon.ico' %}" sizes="48x48" />
 
     {% if THEME_STYLES %}
